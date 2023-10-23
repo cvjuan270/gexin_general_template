@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <template id="report_invoice_exclusive_main" inherit_id="general_template.report_invoice_exclusive_main">
+            <xpath expr="//div[@name='customer_name_address']" position="after">
+                <div class="row">
+                    <div class="col-3"
+                         t-attf-style="border-radius: 10px;border: 2px solid #{o.company_id.theme_color or '#666'};padding: 8px;height:auto;margin:0.4%;width:24.6%">
+                        <stron t-attf-style="color:#{o.company_id.company_address_color}">CTA. CTE. Soles BBVA</stron><br/>
+                        <b>0011-0521-02004250-41</b><br/>
+                    </div>
+                    <div class="col-3"
+                         t-attf-style="border-radius: 10px;border: 2px solid #{o.company_id.theme_color or '#666'};padding: 8px;height:auto;margin:0.4%;width:24.6%">
+                        <stron t-attf-style="color:#{o.company_id.company_address_color}">CCI. Soles BBVA</stron><br/>
+                        <b>011-521-000200425041-27</b>
+                    </div>
+                    <div class="col-3"
+                         t-attf-style="border-radius: 10px;border: 2px solid #{o.company_id.theme_color or '#666'};padding: 8px;height:auto;margin:0.4%;width:24.6%">
+                        <stron t-attf-style="color:#{o.company_id.company_address_color}">CTA. CTE. Dolares BBVA</stron><br/>
+                        <b>011-0521-2101000318-87</b>
+                    </div>
+                    <div class="col-3"
+                         t-attf-style="border-radius: 10px;border: 2px solid #{o.company_id.theme_color or '#666'};padding: 8px;height:auto;margin:0.4%;width:24.6%">
+                        <stron t-attf-style="color:#{o.company_id.company_address_color}">CCI. Dolares BBVA</stron><br/>
+                        <b>011-521-000100031887-21</b>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="sale_exclusive_header" inherit_id="general_template.sale_exclusive_header">
+            <xpath expr="//div[hasclass('row')][1]/div[1]" position="inside">
+                <span t-attf-style="color: #{o.company_id and o.company_id.company_address_color or '#000000'};">
+                    CTA. CTE. Soles BBVA: 0011-0521-02004250-41<br/>
+                    CCI. Soles BBVA: 011-521-000200425041-27<br/>
+                    CTA. CTE. Dolares BBVA: 011-0521-2101000318-87<br/>
+                    CCI. Dolares BBVA: 011-521-000100031887-21<br/>
+                </span>
+            </xpath>
+        </template>
+    </data>
+</odoo>
